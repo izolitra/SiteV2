@@ -1,0 +1,11 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'profile_auto/css/order_tracking.css' %}">
+<div class="container">
+<h1>Детали заказа #{{ order.id }}</h1>
+<p><strong>Заказ от:</strong> {{ order.customer_name }}</p>
+<p><strong>Статус заказа:</strong> {{ order.get_status_display }}</p>
+
+<p><strong>Описание:</strong> {{ order.description }}</p>
+
+</div>
+
